@@ -8,7 +8,7 @@ pipeline{
            stage('Checkout'){
               steps{
 		 echo 'cloning..'
-                 git 'https://github.com/RayItern/JUNECLASSPRO1.git'
+                 git 'https://https://github.com/Patrickmbaza/FEBclassproject.git'
               }
           }
           stage('Compile with maven'){
