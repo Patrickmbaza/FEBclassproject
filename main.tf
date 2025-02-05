@@ -1,20 +1,20 @@
-# # Create an S3 bucket
-# resource "aws_s3_bucket" "tfstate-bucket-Pat" {
-#   bucket = "my-tf-state-bucket2122"
+ # Create an S3 bucket
+ resource "aws_s3_bucket" "tfstate-bucket-Pat" {
+   bucket = "my-tf-state-bucket2122"
 
-#   tags = {
-#     Name        = "tfstate bucket"
-#     Environment = "Dev"
-#   }
-# }
+   tags = {
+     Name        = "tfstate bucket"
+     Environment = "Dev"
+   }
+ }
 
-# # Create versioning for the S3 bucket
-# resource "aws_s3_bucket_versioning" "tfstate-versioning" {
-#   bucket = aws_s3_bucket.tfstate-bucket-Pat.id
-#   versioning_configuration {
-#     status = "Enabled"
-#   }
-# }
+ # Create versioning for the S3 bucket
+ resource "aws_s3_bucket_versioning" "tfstate-versioning" {
+   bucket = aws_s3_bucket.tfstate-bucket-Pat.id
+   versioning_configuration {
+     status = "Enabled"
+   }
+ }
 
 
 #Create a VPC
